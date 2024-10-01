@@ -9,10 +9,7 @@ def is_palindrome(word):
     True -- jeśli wyraz jest palindromem
     False -- jeśli wyraz nie jest palindromem
     """
-    for i in range(len(word) // 2):
-        if word[i] != word[-i-1]:
-            return False
-    return True
+    return word == word[::-1]
     
 print(is_palindrome("kajak"))  # Oczekiwane: True
 print(is_palindrome("potop"))  # Oczekiwane: True
